@@ -4,7 +4,7 @@ import styles from "./MainNavigation.module.css";
 export default function MainNavigation(params) {
   return (
     <header className={styles.header}>
-      <div>REACT MEETUP</div>
+      <div className={styles.logo}>REACT MEETUP</div>
       <nav>
         <ul>
           <li>
