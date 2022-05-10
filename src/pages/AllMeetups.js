@@ -31,18 +31,26 @@ export default function AllMeetups() {
       });
   }, []);
 
-  if (isLoading) {
-    return (
-      <section>
-        <p>Loading data...</p>
-      </section>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <section>
+  //       <p>Loading data...</p>
+  //     </section>
+  //   );
+  // }
 
   return (
     <div>
-      <h1>All Meetups</h1>
-      <MeetupList meetups={meetups} />
+      {isLoading ? (
+        <section>
+          <p>Loading data...</p>
+        </section>
+      ) : (
+        <section>
+          <h1>All Meetups</h1>
+          <MeetupList meetups={meetups} />
+        </section>
+      )}
     </div>
   );
 }
